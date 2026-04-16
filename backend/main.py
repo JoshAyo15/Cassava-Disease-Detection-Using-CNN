@@ -25,6 +25,26 @@ app = FastAPI(
     version="1.0.0"
 )
 
+from fastapi import FastAPI
+
+app = FastAPI(title="Cassava Disease Detection API")
+
+# ←←← Add the root route here (right after app = FastAPI())
+@app.get("/")
+async def root():
+    return {
+        "message": "✅ Cassava Disease Detection API is LIVE!",
+        "how_to_use": "Send a POST request to /predict with a cassava leaf image",
+        "status": "running"
+    }
+
+
+# Your other existing code and routes go here
+# For example:
+# @app.post("/predict")
+# async def predict(image: UploadFile):
+#     ...
+
 # CORS middleware
 app.add_middleware(
     CORSMiddleware,
