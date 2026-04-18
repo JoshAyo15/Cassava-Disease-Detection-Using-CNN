@@ -1,0 +1,22 @@
+# .dockerignore
+
+# Ignore unnecessary files to reduce size
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+venv*/
+.env
+.git/
+.gitignore
+.github/
+.vscode/
+__pycache__
+.ipynb_checkpoints
+model/*.pkl          # If your model is very big, you can ignore it and download later
+*.log
+
+
