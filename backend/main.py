@@ -45,6 +45,32 @@ async def root():
 # async def predict(image: UploadFile):
 #     ...
 
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI(
+    title="Cassava Disease Classifier API",
+    description="ML-powered API for cassava leaf disease classification",
+    version="1.0.0"
+)
+
+# CORS (very important for frontend)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Change later to your domain
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+@app.get("/")
+async def root():
+    return {"message": "✅ API is running!"}
+
+@app.get("/health")
+async def health():
+    return {"status": "healthy"}
+
 # CORS middleware
 app.add_middleware(
     CORSMiddleware,
