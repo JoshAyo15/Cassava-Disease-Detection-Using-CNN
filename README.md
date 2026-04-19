@@ -5,7 +5,7 @@ colorFrom: green
 colorTo: blue
 sdk: gradio
 sdk_version: "4.0.0"
-app_file: app.py
+app_file: backend/main.py
 pinned: false
 ---
 "Add Space configuration"
