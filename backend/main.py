@@ -13,6 +13,7 @@ import logging
 from datetime import datetime
 import sqlite3
 from backend.predictor import DiseasePredictor
+from fastapi.responses import RedirectResponse
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -405,15 +406,20 @@ async def clear_predictions():
         raise HTTPException(status_code=500, detail="Clear failed")
 
 
+# @app.get("/", tags=["Root"])
+# async def root():
+#     """API root endpoint"""
+#     return {
+#         "message": "Cassava Disease Classifier API",
+#         "docs_url": "/docs",
+#         "health_url": "/health",
+#         "predict_url": "/predict",   
+#     }
+
 @app.get("/", tags=["Root"])
 async def root():
-    """API root endpoint"""
-    return {
-        "message": "Cassava Disease Classifier API",
-        "docs_url": "/docs",
-        "health_url": "/health",
-        "predict_url": "/predict"
-    }
+    """Redirect to Swagger UI documentation"""
+    return RedirectResponse(url="/docs")
 
 
 if __name__ == "__main__":
