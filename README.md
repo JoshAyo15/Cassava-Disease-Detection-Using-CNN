@@ -1,3 +1,15 @@
+---
+title: Cassava Disease Detection CNN
+emoji: 🌿
+colorFrom: green
+colorTo: blue
+sdk: gradio
+sdk_version: "4.0.0"
+app_file: app.py
+pinned: false
+---
+"Add Space configuration"
+
 Cassava Guard — Cassava Leaf Disease Classification
 
 Overview
