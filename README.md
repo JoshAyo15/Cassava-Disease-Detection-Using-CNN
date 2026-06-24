@@ -27,7 +27,7 @@ Quick Start
 
 - Clone and set up
   - Fork this repository on GitHub and clone your fork:
-    - git clone https://github.com/JoshAyo/Cassava-Disease-Detection-Using-CNN.git
+    - git clone https://github.com/JoshAyo15/Cassava-Disease-Detection-Using-CNN.git
     - cd cassava-project
   - Create and activate a Python virtual environment:
     - Windows PowerShell: python -m venv venv; .\venv\Scripts\Activate.ps1
